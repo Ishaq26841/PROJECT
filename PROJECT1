@@ -1,0 +1,14 @@
+age = int(input("Enter your age: "))
+can_swim = input("Can you swim? (yes/no): ").lower().strip()
+has_adult = input("Are you accompanied by an adult? (yes/no): ").lower().strip()
+
+if age < 5:
+    print("You may enter the toddler pool.")
+elif can_swim == "yes" and age >= 12:
+    print("You may enter the deep pool.")
+elif can_swim == "yes" and age >= 5:
+    print("You may enter the shallow pool.")
+elif can_swim == "no" and has_adult == "yes":
+    print("You may enter the shallow pool with adult supervision.")
+else:
+    print("You may not enter the pool.")
